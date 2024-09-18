@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a82d435-d398-449f-b14b-442b94166898" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/random_wiki_articles.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scraper/scraper.py" beforeDir="false" afterPath="$PROJECT_DIR$/scraper/scraper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/scraper.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/scraper.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +88,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1726690301309</updated>
-      <workItem from="1726690311886" duration="4096000" />
+      <workItem from="1726690311886" duration="4415000" />
     </task>
     <servers />
   </component>
