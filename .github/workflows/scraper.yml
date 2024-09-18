@@ -1,0 +1,27 @@
+name: Run Web Scraper
+
+on:
+  schedule:
+    - cron: '0 22 * * *'  # Runs the scraper every day at 2 AM UTC
+  workflow_dispatch:  # Allows manual trigger from the GitHub Actions tab
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12.5'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt  
+
+      - name: Run scraper
+        run: |
+          python scraper.py 
