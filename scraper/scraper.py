@@ -1,10 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
-import random
 
 
 def fetch_random_article_titles(num_articles):
-    # Wikipedia's Random page URL
     url = "https://en.wikipedia.org/wiki/Special:Random"
     titles = []
 
@@ -14,6 +12,7 @@ def fetch_random_article_titles(num_articles):
             soup = BeautifulSoup(response.content, 'html.parser')
             title = soup.find('h1', {'id': 'firstHeading'}).text
             titles.append(title)
+            print(f"Fetched title: {title}")  # Debug: Print title to console
         else:
             print(f"Failed to fetch article. Status code: {response.status_code}")
 
@@ -21,16 +20,17 @@ def fetch_random_article_titles(num_articles):
 
 
 def save_titles_to_file(titles, filename):
-    with open(filename, 'w', encoding='utf-8') as file:
+    with open(filename, 'a', encoding='utf-8') as file:  # 'a' mode to append
         for title in titles:
             file.write(f"{title}\n")
+    print(f"Saved titles to {filename}")  # Debug: Confirm file saving
 
 
 def main():
     num_articles = 5
     titles = fetch_random_article_titles(num_articles)
     save_titles_to_file(titles, 'random_wiki_articles.txt')
-    print(f"Saved {num_articles} random Wikipedia article titles to 'random_wiki_articles.txt'.")
+    print(f"Completed fetching and saving {num_articles} articles.")
 
 
 if __name__ == "__main__":
