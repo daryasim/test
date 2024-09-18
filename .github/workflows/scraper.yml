@@ -2,8 +2,8 @@ name: Run Web Scraper
 
 on:
   schedule:
-    - cron: '*/5 * * * *'  # Runs the scraper every day at 2 AM UTC
-  workflow_dispatch:  # Allows manual trigger from the GitHub Actions tab
+    - cron: '*/5 * * * *'  # Runs every 5 minutes
+  workflow_dispatch:  # Allows for manual triggering
 
 jobs:
   build:
@@ -16,12 +16,29 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.12.5'
+          python-version: '3.x'
 
       - name: Install dependencies
         run: |
-          pip install -r requierments.txt  
+          pip install requests beautifulsoup4
+
+      - name: Print working directory
+        run: |
+          pwd
+
+      - name: List files
+        run: |
+          ls -R  # List files recursively to check the directory structure
 
       - name: Run scraper
         run: |
-          python scraper/scraper.py 
+          python scraper.py
+
+      - name: Check if file exists and display contents
+        run: |
+          if [ -f random_wiki_articles.txt ]; then
+            echo "File exists"
+            cat random_wiki_articles.txt  # Display file contents
+          else
+            echo "File does not exist"
+          fi
