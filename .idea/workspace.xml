@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a82d435-d398-449f-b14b-442b94166898" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/scraper.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/scraper.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scraper/random_wiki_articles.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scraper/random_wiki_articles.txt" afterDir="false" />
-    </list>
+    <list default="true" id="3a82d435-d398-449f-b14b-442b94166898" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,6 +36,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\darya\PycharmProjects\webScrapingThesis" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="scraper" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="webScrapingThesis" />
@@ -84,7 +86,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1726690301309</updated>
-      <workItem from="1726690311886" duration="2250000" />
+      <workItem from="1726690311886" duration="2561000" />
     </task>
     <servers />
   </component>
