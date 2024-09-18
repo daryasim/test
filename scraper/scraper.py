@@ -31,7 +31,7 @@ def save_titles_to_file(titles, filename):
 def main():
     num_articles = 5
     titles = fetch_random_article_titles(num_articles)
-    save_titles_to_file(titles, '../random_wiki_articles.txt')
+    save_titles_to_file(titles, 'random_wiki_articles.txt')
     print(f"Completed fetching and saving {num_articles} articles.")
 
 
