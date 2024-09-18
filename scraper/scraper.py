@@ -20,11 +20,13 @@ def fetch_random_article_titles(num_articles):
 
 
 def save_titles_to_file(titles, filename):
-    with open(filename, 'a', encoding='utf-8') as file:  # 'a' mode to append
-        for title in titles:
-            file.write(f"{title}\n")
-    print(f"Saved titles to {filename}")  # Debug: Confirm file saving
-
+    try:
+        with open(filename, 'w', encoding='utf-8') as file:  # Use 'w' mode to overwrite
+            for title in titles:
+                file.write(f"{title}\n")
+        print(f"Saved titles to {filename}")  # Debug: Confirm file saving
+    except Exception as e:
+        print(f"Failed to write to file: {e}")
 
 def main():
     num_articles = 5
